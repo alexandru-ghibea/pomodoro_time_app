@@ -2,7 +2,7 @@ from tkinter import *
 import math
 
 # ---------------------------- CONSTANTS ------------------------------- #
-#From Colorhunt.io
+#Color codes from colorhunt.co
 PINK = "#e2979c"
 RED = "#e7305b"
 GREEN = "#9bdeac"
@@ -14,8 +14,7 @@ LONG_BREAK_MIN = 20
 REPS = 0
 timer = None
 
-# ---------------------------- TIMER RESET ------------------------------- #
-
+# TODO 4  Reset Timer
 
 def reset_timer():
     window.after_cancel(timer)
@@ -26,7 +25,7 @@ def reset_timer():
     REPS = 0
 
 
-# ---------------------------- TIMER MECHANISM ------------------------------- #
+#TODO 3 Time Mechanism
 
 
 def start_timer():
@@ -46,7 +45,7 @@ def start_timer():
         count_down(work_sec)
         title.config(text="Work", fg=GREEN)
 
-# ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
+#TODO 2 Countdown Mechanism
 
 
 def count_down(count):
@@ -65,7 +64,8 @@ def count_down(count):
         for _ in range(work_sessions):
             marks += "✔"
         check_marks.config(text=marks)
-# ---------------------------- UI SETUP ------------------------------- #
+        
+#TODO 1 Setup Ui
 
 
 window = Tk()
